@@ -12,7 +12,7 @@ const features = [
 
 export default function Hiring() {
   return (
-    <div className="min-h-screen relative overflow-hidden bg-[#0A0A0A] flex items-center justify-center">
+    <div className="min-h-screen relative overflow-hidden flex items-center justify-center">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(147,51,234,0.1)_0%,_transparent_60%)]" />
@@ -33,7 +33,7 @@ export default function Hiring() {
             transition={{ duration: 4, repeat: Infinity }}
             className="mb-8 inline-block"
           >
-            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
+            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-500 dark:from-purple-500 dark:to-pink-500 rounded-2xl flex items-center justify-center">
               <Rocket className="w-8 h-8 text-white transform -rotate-45" />
             </div>
           </motion.div>
@@ -43,7 +43,7 @@ export default function Hiring() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500"
+            className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-500 dark:from-purple-500 dark:to-pink-500"
           >
             Launching Soon
           </motion.h1>
@@ -52,7 +52,7 @@ export default function Hiring() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-gray-400 text-lg mb-12 max-w-xl mx-auto"
+            className="text-gray-600 dark:text-gray-400 text-lg mb-12 max-w-xl mx-auto"
           >
             We're building a revolutionary hiring platform that connects talented developers 
             with innovative companies. Be the first to know when we launch.
@@ -66,12 +66,12 @@ export default function Hiring() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                className="bg-[#171717]/30 backdrop-blur-sm p-4 rounded-xl border border-gray-800/30"
+                className="bg-gray-400/30 dark:bg-[#171717]/30 backdrop-blur-sm p-4 rounded-xl border border-gray-400/30 dark:border-gray-800/30"
               >
-                <div className="w-10 h-10 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-3 mx-auto">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500/20 to-green-500/20 dark:from-purple-500/20 dark:to-pink-500/20 rounded-lg flex items-center justify-center mb-3 mx-auto">
                   {feature.icon}
                 </div>
-                <p className="text-gray-400 text-sm">{feature.text}</p>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">{feature.text}</p>
               </motion.div>
             ))}
           </div>
@@ -84,7 +84,7 @@ export default function Hiring() {
           >
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors group"
+              className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors group"
             >
               <ArrowRight className="w-4 h-4 transform rotate-180 transition-transform group-hover:-translate-x-1" />
               Back to Home
