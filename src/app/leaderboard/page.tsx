@@ -12,7 +12,7 @@ const podiumPositions = [
 
 export default function Leaderboard() {
   return (
-    <div className="min-h-screen relative overflow-hidden bg-[#0A0A0A] flex items-center justify-center">
+    <div className="min-h-screen relative overflow-hidden flex items-center justify-center">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(234,179,8,0.1)_0%,_transparent_60%)]" />
@@ -52,7 +52,7 @@ export default function Leaderboard() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-gray-400 text-lg mb-12 max-w-xl mx-auto"
+            className="text-gray-600 dark:text-gray-400 text-lg mb-12 max-w-xl mx-auto"
           >
             Compete with the best developers worldwide. Climb the ranks, earn rewards, 
             and prove your coding prowess.
@@ -84,7 +84,7 @@ export default function Leaderboard() {
           >
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors group"
+              className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors group"
             >
               <ArrowRight className="w-4 h-4 transform rotate-180 transition-transform group-hover:-translate-x-1" />
               Back to Home
